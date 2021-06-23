@@ -1,0 +1,29 @@
+{
+  "name": "kepler-launch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "pnpm i --prefix server",
+    "install-client": "pnpm i --prefix client",
+    "install": "concurrently \"pnpm run install-client\"  \"pnpm run install-server\"",
+    "server": "pnpm start --prefix server",
+    "client": "pnpm start --prefix client",
+    "start": "concurrently \"pnpm run server\"  \"pnpm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clinzy25/kepler-launch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clinzy25/kepler-launch/issues"
+  },
+  "homepage": "https://github.com/clinzy25/kepler-launch#readme",
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  }
+}
