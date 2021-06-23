@@ -7,9 +7,10 @@
     "install-server": "pnpm i --prefix server",
     "install-client": "pnpm i --prefix client",
     "install": "concurrently \"pnpm run install-client\"  \"pnpm run install-server\"",
-    "server": "pnpm start --prefix server",
+    "server": "pnpm watch --prefix server",
     "client": "pnpm start --prefix client",
-    "start": "concurrently \"pnpm run server\"  \"pnpm run client\"",
+    "dev": "concurrently \"pnpm run server\"  \"pnpm run client\"",
+    "deploy": "npm run build --prefix client && pnpm start --prefix server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
