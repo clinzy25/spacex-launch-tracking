@@ -11,7 +11,8 @@
     "client": "pnpm start --prefix client",
     "dev": "concurrently \"pnpm run server\"  \"pnpm run client\"",
     "deploy": "npm run build --prefix client && pnpm start --prefix server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy-cluster": "npm run build --prefix client && pnpm run cluster --prefix server",
+    "test": "pnpm test --prefix server && pnpm test --prefix client"
   },
   "repository": {
     "type": "git",
