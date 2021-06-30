@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGO_URL =
-  'mongodb+srv://kepler-api:nrqg5O1aCXLsCKsS@kepler-launch.wyyd8.mongodb.net/kepler-launch?retryWrites=true&w=majority';
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose.connection.once('open', () => {
   console.log('MongoDB connected');
