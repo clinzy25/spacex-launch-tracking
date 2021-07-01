@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install-server": "pnpm i --prefix server",
-    "install-client": "pnpm i --prefix client",
-    "install": "concurrently \"pnpm run install-client\"  \"pnpm run install-server\"",
-    "server": "pnpm watch --prefix server",
-    "client": "pnpm start --prefix client",
-    "dev": "concurrently \"pnpm run server\"  \"pnpm run client\"",
-    "deploy": "npm run build --prefix client && pnpm start --prefix server",
-    "deploy-cluster": "npm run build --prefix client && pnpm run cluster --prefix server",
-    "test": "pnpm test --prefix server && pnpm test --prefix client"
+    "install-server": "npm i --prefix server",
+    "install-client": "npm i --prefix client",
+    "install": "concurrently \"npm run install-client\"  \"npm run install-server\"",
+    "server": "npm watch --prefix server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\"  \"npm run client\"",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
+    "test": "npm test --prefix server && npm test --prefix client"
   },
   "repository": {
     "type": "git",
