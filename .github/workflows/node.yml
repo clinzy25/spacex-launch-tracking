@@ -1,0 +1,16 @@
+name: SpaceX Launch Tracking CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with: 
+        node-version: '16'
+    - run: pnpm install
+    - run: pnpm run build --prefix client
