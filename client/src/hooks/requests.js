@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3001/v1';
+const API_URL = 'v1';
 
 async function httpGetPlanets() {
   const response = await fetch(`${API_URL}/planets`);
@@ -21,7 +21,7 @@ async function httpSubmitLaunch(launch) {
       body: JSON.stringify(launch),
     });
   } catch (err) {
-    console.log(err)
+    console.log(err);
     return {
       ok: false,
     };
@@ -35,7 +35,7 @@ async function httpAbortLaunch(id) {
       method: 'delete',
     });
   } catch (err) {
-    console.log(err)
+    console.log(err);
     return {
       ok: false,
     };
